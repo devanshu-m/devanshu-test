@@ -1,0 +1,27 @@
+<h1><%= link_to 'New Post?', new_post_path %></h1>
+
+<br>
+<br>
+
+<h1>All posts</h1>
+
+<table class="table table-hover">
+<tr>
+	<th>Title of post</th>
+	<th>Author Name</th>
+	<th>Created at</th>
+	<th>Link</th>
+</tr>
+
+<% @post.each do |p| %>
+<tr>
+	<td><%= p.title %></td>
+	<td><%= p.user.first_name %></td>
+	<td><%= p.created_at %></td>
+	<td><%= link_to 'Show', post_path(p) %></td>
+
+</tr>
+<% end %>
+</table>
+
+<%= will_paginate @post, renderer: BootstrapPagination::Rails %>

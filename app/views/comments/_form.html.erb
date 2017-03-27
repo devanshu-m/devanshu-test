@@ -1,0 +1,19 @@
+<%= form_for ([@post, @post.comments.build]) do |p| %>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">Add a new comment
+          <div class="modal-body"></div>
+          	<p>
+				<%= p.label "Enter comment here" %><br>
+				<%= p.text_area :body %>
+			</p>
+
+			<p>
+				<%= p.submit "Submit comment" %>
+			</p>
+        </h4>
+    </div>
+  </div>
+</div>
+<% end %>

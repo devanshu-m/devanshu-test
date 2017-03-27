@@ -1,0 +1,39 @@
+<%= form_for @post do |p| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibited
+        this phone info from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |m| %>
+          <li><%= m %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">Add a new post
+          <div class="modal-body"></div>
+          	<p>
+				<%= p.label "Title of your post" %><br>
+				<%= p.text_field :title %>
+			</p>
+
+			<p>
+				<%= p.label "Body of your post" %><br>
+				<%= p.text_area :body %>
+			</p>
+
+			<p>
+				<%= p.submit "Submit new post" %>
+			</p>
+        </h4>
+    </div>
+  </div>
+</div>
+<% end %>
