@@ -24,5 +24,9 @@ test:
   timeout: 5000
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+ # <<: *default
+  #database: db/production.sqlite3
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
