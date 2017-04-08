@@ -1,0 +1,13 @@
+<h2>About this app</h2>
+
+<p>This app is developed and maintained by <%= link_to 'https://devanshu-m.herokuapp.com/', target: "_blank" do %> Devanshu Matlawala </p><%end%>
+
+<p>Functionalities:</p>
+<ol>
+<li>New users can sign up and existing users can sign in. Users will need to be authenticated before they can write a new post/comment on a post. Authentication is done using the devise gem.</li>
+<li>Registered users can create new posts.</li>
+<li>Registered users can comment on other users’ posts.</li>
+<li>Home page (index page) lists all posts in the database by all users.</li>
+<li>Tests are written using the rspec/capybara gem. Fake test data is generated using Factory Girl and Faker gems.</li>
+<li>All code can be found on my github: <%= link_to 'https://github.com/devanshu-m/devanshu-test', target: "_blank" do %> Github code </li><%end%>
+</ol>
