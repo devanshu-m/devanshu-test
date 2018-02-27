@@ -19,7 +19,9 @@ development:
 test:
   <<: *default
   adapter: sqlite3
-  database: db/test.sqlite3
+  database: devanshu-sample_test
+  username: root
+  encoding: utf8
   pool: 5
   timeout: 5000
 
