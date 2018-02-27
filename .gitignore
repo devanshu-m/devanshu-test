@@ -17,3 +17,7 @@
 /tmp
 
 /devanshu-sample_test
+
+/config/secrets.yml
+
+/config/database.yml

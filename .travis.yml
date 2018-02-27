@@ -2,8 +2,8 @@ language: ruby
 #env:
 #- DB=sqlite3
 #- DB=postgres
-before_script:
-- RAILS_ENV=production bundle exec rake db:migrate --trace
+#before_script:
+#- RAILS_ENV=production bundle exec rake db:migrate --trace
 #- RAILS_ENV=production bundle exec rake db:migrate --trace
 #- bundle exec rake db:test:prepare
 script:
