@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  subject {described_class.new(body: "")}
+  subject {described_class.new(body: "Some text")}
 
   it "is invalid" do
   	expect(subject).to be_valid
