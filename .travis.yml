@@ -1,10 +1,10 @@
 language: ruby
 env:
-  - DB=mysql
+  - DB=sqlite3
 script: 
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
-before_script:
-  - mysql -e 'create database devanshu-sample_test'
+#before_script:
+ # - mysql -e 'create database devanshu-sample_test'
 bundler_args: --binstubs=./bundler_stubs
