@@ -3,14 +3,14 @@ language: ruby
 #- DB=sqlite3
 #- DB=postgres
 before_script:
-- RAILS_ENV=test bundle exec rake db:migrate --trace
+- RAILS_ENV=production bundle exec rake db:migrate --trace
 #- RAILS_ENV=production bundle exec rake db:migrate --trace
 #- bundle exec rake db:test:prepare
 script:
 - bundle exec rspec spec/
 services:
 - postgresql
-bundler_args: "--binstubs=./bundler_stubs"
+#bundler_args: "--binstubs=./bundler_stubs"
 deploy:
   provider: heroku
   api_key:
