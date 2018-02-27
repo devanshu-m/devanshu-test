@@ -15,8 +15,17 @@
 <% if notice %><p class="alert alert-info"><%= notice %></p><% end %>
 <% if alert %><p class="alert alert-warning"><%= alert %></p><% end %>
 
-
-<%= yield %>
+<div class="modal-dialog modal-lg" style="width: 90%">
+  <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">
+          <div class="modal-body">
+			<%= yield %>
+		  </div>
+		</h4>
+	</div>
+  </div>
+</div>
 
 
 <footer>
